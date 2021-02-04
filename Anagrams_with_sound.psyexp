@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.2.9">
+<PsychoPy2experiment encoding="utf-8" version="2020.2.10">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="0" valType="str"/>
     <Param name="Audio lib" updates="None" val="ptb" valType="str"/>
@@ -9,7 +9,7 @@
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
     <Param name="Experiment info" updates="None" val="{'имя фамилия': '', 'возраст': '', 'пол': &quot;['Ж', 'М']&quot;}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
-    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="False" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="JS libs" updates="None" val="packaged" valType="str"/>
@@ -72,8 +72,8 @@
         <Param name="name" updates="None" val="translate_eng_to_rus" valType="code"/>
       </CodeComponent>
       <CodeComponent name="anagram_input_code">
-        <Param name="Before Experiment" updates="constant" val="time_to_solve = 3" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="time_to_solve = 3;&amp;#10;" valType="extendedCode"/>
+        <Param name="Before Experiment" updates="constant" val="time_to_solve = 6" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="time_to_solve = 6;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="main_input_processor = InputProcessor()&amp;#10;&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="main_input_processor = new InputProcessor();&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="theseKeys = [];&amp;#10;attempts = 0;&amp;#10;success = &quot;No&quot;;&amp;#10;main_input_processor.get_answer(answer);&amp;#10;is_there_input = false;&amp;#10;" valType="extendedCode"/>
@@ -89,8 +89,8 @@
         <Param name="name" updates="None" val="anagram_input_code" valType="code"/>
       </CodeComponent>
       <CodeComponent name="hint_code">
-        <Param name="Before Experiment" updates="constant" val="HINT_START = 288 # 600&amp;#10;HINT_DURATION = 4&amp;#10;MASK_DURATION = 0&amp;#10;&amp;#10;HINT_FINISH = HINT_START + HINT_DURATION + MASK_DURATION&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="HINT_START = 288;&amp;#10;HINT_DURATION = 4;&amp;#10;MASK_DURATION = 0;&amp;#10;HINT_FINISH = ((HINT_START + HINT_DURATION) + MASK_DURATION);&amp;#10;" valType="extendedCode"/>
+        <Param name="Before Experiment" updates="constant" val="HINT_START = 240 # 600&amp;#10;HINT_DURATION = 5&amp;#10;MASK_DURATION = 2&amp;#10;&amp;#10;HINT_FINISH = HINT_START + HINT_DURATION + MASK_DURATION&amp;#10;&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="HINT_START = 240;&amp;#10;HINT_DURATION = 5;&amp;#10;MASK_DURATION = 2;&amp;#10;HINT_FINISH = ((HINT_START + HINT_DURATION) + MASK_DURATION);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Experiment" updates="constant" val="hint_text=visual.TextBox(window=win, &amp;#10;                         text=u'0',&amp;#10;                         font_size=60,&amp;#10;                         font_color=[1,1,1], &amp;#10;                         # size=(1.9,.3), - как было&amp;#10;                         textgrid_shape=[10,1], # одиннаковый размер&amp;#10;                         pos=(0.0, 0.0), &amp;#10;                         grid_horz_justification='center',&amp;#10;                         units='norm',&amp;#10;                         )&amp;#10;&amp;#10;HINT_MASK_CONSONANTS = (u'й',u'ц',u'к',u'н',u'г',u'ш',u'щ',u'з',u'х',&amp;#10;u'ъ',u'ф',u'в',u'п',u'р',u'л',u'д',u'ж',u'ч',u'с',u'м',u'т',u'ь',u'б')&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="hint_text = new visual.TextBox({&quot;window&quot;: win, &quot;text&quot;: &quot;0&quot;, &quot;font_size&quot;: 60, &quot;font_color&quot;: [1, 1, 1], &quot;textgrid_shape&quot;: [10, 1], &quot;pos&quot;: [0.0, 0.0], &quot;grid_horz_justification&quot;: &quot;center&quot;, &quot;units&quot;: &quot;norm&quot;});&amp;#10;HINT_MASK_CONSONANTS = [&quot;\u0439&quot;, &quot;\u0446&quot;, &quot;\u043a&quot;, &quot;\u043d&quot;, &quot;\u0433&quot;, &quot;\u0448&quot;, &quot;\u0449&quot;, &quot;\u0437&quot;, &quot;\u0445&quot;, &quot;\u044a&quot;, &quot;\u0444&quot;, &quot;\u0432&quot;, &quot;\u043f&quot;, &quot;\u0440&quot;, &quot;\u043b&quot;, &quot;\u0434&quot;, &quot;\u0436&quot;, &quot;\u0447&quot;, &quot;\u0441&quot;, &quot;\u043c&quot;, &quot;\u0442&quot;, &quot;\u044c&quot;, &quot;\u0431&quot;];&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="hint_showed = &quot;no&quot;;&amp;#10;frames_hint_showed = 0;&amp;#10;showing_hint = next(show_hint);&amp;#10;mask = &quot;&quot;.join(np.random.choice(HINT_MASK_CONSONANTS, {&quot;size&quot;: answer.length, &quot;replace&quot;: false}));&amp;#10;" valType="extendedCode"/>
@@ -171,6 +171,23 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+      <CodeComponent name="sound_code">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="ON_TIME = EARLIER = WITH_SOUND // 2&amp;#10;&amp;#10;sound_times = [150] * EARLIER + [0] * ON_TIME&amp;#10;shuffle(sound_times)&amp;#10;sound_times = iter(sound_times)" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;thisSound = sounds_path.pop();&amp;#10;sound_before_hint = next(sound_times);&amp;#10;console.log(sound_before_hint);&amp;#10;sound_start = (HINT_START - sound_before_hint);&amp;#10;sound_played = false;&amp;#10;if ((thisSound === null)) {&amp;#10;    sound_type = &quot;none&quot;;&amp;#10;    sound_played = true;&amp;#10;} else {&amp;#10;    if (_pj.in_es6(&quot;cry&quot;, thisSound)) {&amp;#10;        sound_type = &quot;negative&quot;;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;laugh&quot;, thisSound)) {&amp;#10;            sound_type = &quot;positive&quot;;&amp;#10;        } else {&amp;#10;            sound_type = &quot;neutral&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="thisSound = sounds_path.pop()&amp;#10;&amp;#10;sound_before_hint = next(sound_times)&amp;#10;print(sound_before_hint)&amp;#10;sound_start = HINT_START - sound_before_hint&amp;#10;&amp;#10;# sound_player.setSound(thisSound)&amp;#10;&amp;#10;sound_played = False&amp;#10;&amp;#10;if thisSound is None:&amp;#10;    sound_type = u'none'&amp;#10;    sound_played = True&amp;#10;elif u'cry' in thisSound:&amp;#10;    sound_type = u'negative'&amp;#10;elif u'laugh' in thisSound:&amp;#10;    sound_type = u'positive'&amp;#10;else:&amp;#10;    sound_type = u'neutral'" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if thisSound is not None and not sound_played:&amp;#10;    sound_played = True&amp;#10;    # sound_player.play()" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (((thisSound !== null) &amp;&amp; (! sound_played))) {&amp;#10;    sound_played = true;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="sound_code" valType="code"/>
+      </CodeComponent>
       <CodeComponent name="data_saving">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -183,27 +200,10 @@
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="all_anagrams.addData(&quot;Success&quot;, success);&amp;#10;if ((success === &quot;Yes&quot;)) {&amp;#10;    solution_time = successful_attempt_time;&amp;#10;} else {&amp;#10;    solution_time = format_time(main_taskClock.getTime());&amp;#10;}&amp;#10;all_anagrams.addData(&quot;Solution time&quot;, solution_time);&amp;#10;all_anagrams.addData(&quot;Attempts&quot;, attempts);&amp;#10;all_anagrams.addData(&quot;Sound path&quot;, thisSound);&amp;#10;if (sound_played) {&amp;#10;    all_anagrams.addData(&quot;Sound type&quot;, sound_type);&amp;#10;} else {&amp;#10;    all_anagrams.addData(&quot;Sound type&quot;, &quot;NA&quot;);&amp;#10;}&amp;#10;all_anagrams.addData(&quot;Sound start in frames&quot;, SOUND_START);&amp;#10;if (hint_showed) {&amp;#10;    all_anagrams.addData(&quot;Hint&quot;, hint_showed);&amp;#10;} else {&amp;#10;    all_anagrams.addData(&quot;Hint&quot;, &quot;NA&quot;);&amp;#10;}&amp;#10;all_anagrams.addData(&quot;Hint appearance in frames&quot;, HINT_START);&amp;#10;all_anagrams.addData(&quot;Hint duration in frames&quot;, HINT_DURATION);&amp;#10;real_time = format_time(real_time_clock_for_solving_all_anagrams.getTime());&amp;#10;all_anagrams.addData(&quot;Real time spend solving&quot;, real_time);&amp;#10;" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="# сохранение информации о решении&amp;#10;&amp;#10;all_anagrams.addData(u'Success', success)&amp;#10;&amp;#10;if success == u'Yes':&amp;#10;    solution_time = successful_attempt_time&amp;#10;else:&amp;#10;    solution_time = format_time(main_taskClock.getTime())&amp;#10;&amp;#10;all_anagrams.addData(u'Solution time', solution_time)&amp;#10;all_anagrams.addData(u'Attempts', attempts)&amp;#10;&amp;#10;&amp;#10;# сохранение информации о звуках&amp;#10;all_anagrams.addData(u'Sound path', thisSound)&amp;#10;if sound_played:&amp;#10;    all_anagrams.addData(u'Sound type', sound_type)&amp;#10;else:&amp;#10;    all_anagrams.addData(u'Sound type', u'NA')&amp;#10;    &amp;#10;all_anagrams.addData(u'Sound start in frames', SOUND_START)&amp;#10;&amp;#10;# сохранение информации о подсказках&amp;#10;if hint_showed:&amp;#10;    all_anagrams.addData(u'Hint', hint_showed)&amp;#10;else:&amp;#10;    all_anagrams.addData(u'Hint', u'NA')&amp;#10;&amp;#10;all_anagrams.addData(u'Hint appearance in frames', HINT_START)&amp;#10;all_anagrams.addData(u'Hint duration in frames', HINT_DURATION)&amp;#10;&amp;#10;# сохранение информации о реальном времени, которое уходит на решение&amp;#10;# анаграмм, с учётом времени на пересоздание анаграммы&amp;#10;real_time = format_time(real_time_clock_for_solving_all_anagrams.getTime())&amp;#10;all_anagrams.addData(u'Real time spend solving', real_time)&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="all_anagrams.addData(&quot;Success&quot;, success);&amp;#10;if ((success === &quot;Yes&quot;)) {&amp;#10;    solution_time = successful_attempt_time;&amp;#10;} else {&amp;#10;    solution_time = format_time(main_taskClock.getTime());&amp;#10;}&amp;#10;all_anagrams.addData(&quot;Solution time&quot;, solution_time);&amp;#10;all_anagrams.addData(&quot;Attempts&quot;, attempts);&amp;#10;all_anagrams.addData(&quot;Sound path&quot;, thisSound);&amp;#10;if (sound_played) {&amp;#10;    all_anagrams.addData(&quot;Sound type&quot;, sound_type);&amp;#10;    all_anagrams.addData(&quot;sound_\u0441ue&quot;, sound_before_hint);&amp;#10;} else {&amp;#10;    all_anagrams.addData(&quot;Sound type&quot;, &quot;NA&quot;);&amp;#10;    all_anagrams.addData(&quot;sound_\u0441ue&quot;, &quot;NA&quot;);&amp;#10;}&amp;#10;all_anagrams.addData(&quot;Sound start in frames&quot;, sound_start);&amp;#10;if (hint_showed) {&amp;#10;    all_anagrams.addData(&quot;Hint&quot;, hint_showed);&amp;#10;} else {&amp;#10;    all_anagrams.addData(&quot;Hint&quot;, &quot;NA&quot;);&amp;#10;}&amp;#10;all_anagrams.addData(&quot;Hint appearance in frames&quot;, HINT_START);&amp;#10;all_anagrams.addData(&quot;Hint duration in frames&quot;, HINT_DURATION);&amp;#10;real_time = format_time(real_time_clock_for_solving_all_anagrams.getTime());&amp;#10;all_anagrams.addData(&quot;Real time spend solving&quot;, real_time);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="# сохранение информации о решении&amp;#10;&amp;#10;all_anagrams.addData(u'Success', success)&amp;#10;&amp;#10;if success == u'Yes':&amp;#10;    solution_time = successful_attempt_time&amp;#10;else:&amp;#10;    solution_time = format_time(main_taskClock.getTime())&amp;#10;&amp;#10;all_anagrams.addData(u'Solution time', solution_time)&amp;#10;all_anagrams.addData(u'Attempts', attempts)&amp;#10;&amp;#10;&amp;#10;# сохранение информации о звуках&amp;#10;all_anagrams.addData(u'Sound path', thisSound)&amp;#10;if sound_played:&amp;#10;    all_anagrams.addData(u'Sound type', sound_type)&amp;#10;    all_anagrams.addData(u'sound_сue', sound_before_hint)&amp;#10;else:&amp;#10;    all_anagrams.addData(u'Sound type', u'NA')&amp;#10;    all_anagrams.addData(u'sound_сue', u'NA')&amp;#10;    &amp;#10;all_anagrams.addData(u'Sound start in frames', sound_start)&amp;#10;&amp;#10;# сохранение информации о подсказках&amp;#10;if hint_showed:&amp;#10;    all_anagrams.addData(u'Hint', hint_showed)&amp;#10;else:&amp;#10;    all_anagrams.addData(u'Hint', u'NA')&amp;#10;&amp;#10;all_anagrams.addData(u'Hint appearance in frames', HINT_START)&amp;#10;all_anagrams.addData(u'Hint duration in frames', HINT_DURATION)&amp;#10;&amp;#10;# сохранение информации о реальном времени, которое уходит на решение&amp;#10;# анаграмм, с учётом времени на пересоздание анаграммы&amp;#10;real_time = format_time(real_time_clock_for_solving_all_anagrams.getTime())&amp;#10;all_anagrams.addData(u'Real time spend solving', real_time)&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="data_saving" valType="code"/>
-      </CodeComponent>
-      <CodeComponent name="sound_code">
-        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="#from psychopy.sound import Sound&amp;#10;&amp;#10;#sound_player = Sound(hamming=False)&amp;#10;&amp;#10;&amp;#10;SOUND_BEFORE_HINT = 10&amp;#10;SOUND_START = HINT_START - SOUND_BEFORE_HINT" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="SOUND_BEFORE_HINT = 10;&amp;#10;SOUND_START = (HINT_START - SOUND_BEFORE_HINT);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;thisSound = sounds_path.pop();&amp;#10;sound_played = false;&amp;#10;if ((thisSound === null)) {&amp;#10;    sound_type = &quot;none&quot;;&amp;#10;    sound_played = true;&amp;#10;} else {&amp;#10;    if (_pj.in_es6(&quot;cry&quot;, thisSound)) {&amp;#10;        sound_type = &quot;negative&quot;;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;laugh&quot;, thisSound)) {&amp;#10;            sound_type = &quot;positive&quot;;&amp;#10;        } else {&amp;#10;            sound_type = &quot;neutral&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="thisSound = sounds_path.pop()&amp;#10;&amp;#10;&amp;#10;&amp;#10;# sound_player.setSound(thisSound)&amp;#10;&amp;#10;sound_played = False&amp;#10;&amp;#10;if thisSound is None:&amp;#10;    sound_type = u'none'&amp;#10;    sound_played = True&amp;#10;elif u'cry' in thisSound:&amp;#10;    sound_type = u'negative'&amp;#10;elif u'laugh' in thisSound:&amp;#10;    sound_type = u'positive'&amp;#10;else:&amp;#10;    sound_type = u'neutral'" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="if thisSound is not None and not sound_played:&amp;#10;    sound_played = True&amp;#10;    # sound_player.play()" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="if (((thisSound !== null) &amp;&amp; (! sound_played))) {&amp;#10;    sound_played = true;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="name" updates="None" val="sound_code" valType="code"/>
       </CodeComponent>
       <SoundComponent name="emotional_sound">
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -214,7 +214,7 @@
         <Param name="sound" updates="set every repeat" val="$thisSound" valType="str"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="condition" valType="str"/>
-        <Param name="startVal" updates="None" val="thisSound is not None and frameN == SOUND_START and not is_there_input" valType="code"/>
+        <Param name="startVal" updates="None" val="thisSound is not None and frameN == sound_start and not is_there_input" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="" valType="code"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -439,8 +439,8 @@
       <CodeComponent name="constants">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="qty_anagrams = 88&amp;#10;&amp;#10;WITHOUT_SOUND = int(qty_anagrams / 4)&amp;#10;WITHOUT_HINT = WITH_HINT = int(qty_anagrams / 2)&amp;#10;&amp;#10;&amp;#10;if WITHOUT_SOUND != qty_anagrams / 4:&amp;#10;    raise ValueError('Not equal groups to create without sound trials')&amp;#10;&amp;#10;if WITHOUT_HINT != qty_anagrams / 2:&amp;#10;    raise ValueError('Not equal groups to hint trials')" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="qty_anagrams = 88;&amp;#10;WITHOUT_SOUND = Number.parseInt((qty_anagrams / 4));&amp;#10;WITHOUT_HINT = WITH_HINT = Number.parseInt((qty_anagrams / 2));&amp;#10;if ((WITHOUT_SOUND !== (qty_anagrams / 4))) {&amp;#10;    throw new ValueError(&quot;Not equal groups to create without sound trials&quot;);&amp;#10;}&amp;#10;if ((WITHOUT_HINT !== (qty_anagrams / 2))) {&amp;#10;    throw new ValueError(&quot;Not equal groups to hint trials&quot;);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="qty_anagrams = 88&amp;#10;&amp;#10;WITHOUT_SOUND = int(qty_anagrams / 4)&amp;#10;WITH_SOUND = qty_anagrams - WITHOUT_SOUND&amp;#10;WITHOUT_HINT = WITH_HINT = int(qty_anagrams / 2)&amp;#10;&amp;#10;&amp;#10;if WITHOUT_SOUND != qty_anagrams / 4:&amp;#10;    raise ValueError('Not equal groups to create without sound trials')&amp;#10;&amp;#10;if WITHOUT_HINT != qty_anagrams / 2:&amp;#10;    raise ValueError('Not equal groups to hint trials')" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="qty_anagrams = 88;&amp;#10;WITHOUT_SOUND = Number.parseInt((qty_anagrams / 4));&amp;#10;WITH_SOUND = (qty_anagrams - WITHOUT_SOUND);&amp;#10;WITHOUT_HINT = WITH_HINT = Number.parseInt((qty_anagrams / 2));&amp;#10;if ((WITHOUT_SOUND !== (qty_anagrams / 4))) {&amp;#10;    throw new ValueError(&quot;Not equal groups to create without sound trials&quot;);&amp;#10;}&amp;#10;if ((WITHOUT_HINT !== (qty_anagrams / 2))) {&amp;#10;    throw new ValueError(&quot;Not equal groups to hint trials&quot;);&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -456,7 +456,7 @@
       <CodeComponent name="prepare_stimuli">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="sounds_path = os.listdir(&quot;sounds&quot;) * 2&amp;#10;&amp;#10;for idx in range(len(sounds_path)):&amp;#10;    path = sounds_path[idx]&amp;#10;    sounds_path[idx] = os.path.join(u'sounds', path)&amp;#10;&amp;#10;&amp;#10;sounds_path += [None] * WITHOUT_SOUND&amp;#10;show_hint = [1] * WITH_HINT + [0] * WITHOUT_HINT&amp;#10;&amp;#10;&amp;#10;shuffle(sounds_path)&amp;#10;shuffle(show_hint)&amp;#10;&amp;#10;if len(show_hint) != qty_anagrams or len(sounds_path) != qty_anagrams:&amp;#10;    raise ValueError('QTY hints or sounds does not equal qty of anagrams')&amp;#10;&amp;#10;show_hint = iter(show_hint)&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="sounds_path = os.listdir(&quot;sounds&quot;) * 2&amp;#10;&amp;#10;for idx in range(len(sounds_path)):&amp;#10;    path = sounds_path[idx]&amp;#10;    sounds_path[idx] = os.path.join(u'sounds', path)&amp;#10;&amp;#10;&amp;#10;sounds_path += [None] * WITHOUT_SOUND&amp;#10;show_hint = [1] * WITH_HINT + [0] * WITHOUT_HINT&amp;#10;&amp;#10;shuffle(sounds_path)&amp;#10;shuffle(show_hint)&amp;#10;&amp;#10;if len(show_hint) != qty_anagrams or len(sounds_path) != qty_anagrams:&amp;#10;    raise ValueError('QTY hints or sounds does not equal qty of anagrams')&amp;#10;&amp;#10;show_hint = iter(show_hint)&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="sounds_path = (os.listdir(&quot;sounds&quot;) * 2);&amp;#10;for (var idx = 0, _pj_a = sounds_path.length; (idx &lt; _pj_a); idx += 1) {&amp;#10;    path = sounds_path[idx];&amp;#10;    sounds_path[idx] = os.path.join(&quot;sounds&quot;, path);&amp;#10;}&amp;#10;sounds_path += ([null] * WITHOUT_SOUND);&amp;#10;show_hint = (([1] * WITH_HINT) + ([0] * WITHOUT_HINT));&amp;#10;shuffle(sounds_path);&amp;#10;shuffle(show_hint);&amp;#10;if (((show_hint.length !== qty_anagrams) || (sounds_path.length !== qty_anagrams))) {&amp;#10;    throw new ValueError(&quot;QTY hints or sounds does not equal qty of anagrams&quot;);&amp;#10;}&amp;#10;show_hint = iter(show_hint);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
@@ -644,6 +644,17 @@
   </Routines>
   <Flow>
     <Routine name="instruction"/>
+    <LoopInitiator loopType="TrialHandler" name="trials_2">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="0" valType="code"/>
+      <Param name="name" updates="None" val="trials_2" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
     <LoopInitiator loopType="TrialHandler" name="training_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('answer', 'жизнь'), ('anagram', 'иьзнж')]), OrderedDict([('answer', 'пункт'), ('anagram', 'пнукт')])]" valType="str"/>
@@ -657,6 +668,7 @@
     </LoopInitiator>
     <Routine name="training"/>
     <LoopTerminator name="training_loop"/>
+    <LoopTerminator name="trials_2"/>
     <Routine name="attention"/>
     <LoopInitiator loopType="TrialHandler" name="all_anagrams">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
@@ -670,7 +682,19 @@
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="main_task"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="0" valType="code"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
     <Routine name="main_task_feedback"/>
+    <LoopTerminator name="trials"/>
     <LoopTerminator name="all_anagrams"/>
     <Routine name="feedback"/>
   </Flow>
