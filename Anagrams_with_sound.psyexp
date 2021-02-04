@@ -9,7 +9,7 @@
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
     <Param name="Experiment info" updates="None" val="{'имя фамилия': '', 'возраст': '', 'пол': &quot;['Ж', 'М']&quot;}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
-    <Param name="Full-screen window" updates="None" val="False" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
     <Param name="Incomplete URL" updates="None" val="" valType="str"/>
     <Param name="JS libs" updates="None" val="packaged" valType="str"/>
@@ -174,10 +174,10 @@
       <CodeComponent name="sound_code">
         <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin Experiment" updates="constant" val="ON_TIME = EARLIER = WITH_SOUND // 2&amp;#10;&amp;#10;sound_times = [150] * EARLIER + [0] * ON_TIME&amp;#10;shuffle(sound_times)&amp;#10;sound_times = iter(sound_times)" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="ON_TIME = EARLIER = WITH_SOUND // 2&amp;#10;&amp;#10;sound_times = [50] * EARLIER + [0] * ON_TIME&amp;#10;shuffle(sound_times)&amp;#10;sound_times = iter(sound_times)" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;thisSound = sounds_path.pop();&amp;#10;sound_before_hint = next(sound_times);&amp;#10;console.log(sound_before_hint);&amp;#10;sound_start = (HINT_START - sound_before_hint);&amp;#10;sound_played = false;&amp;#10;if ((thisSound === null)) {&amp;#10;    sound_type = &quot;none&quot;;&amp;#10;    sound_played = true;&amp;#10;} else {&amp;#10;    if (_pj.in_es6(&quot;cry&quot;, thisSound)) {&amp;#10;        sound_type = &quot;negative&quot;;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;laugh&quot;, thisSound)) {&amp;#10;            sound_type = &quot;positive&quot;;&amp;#10;        } else {&amp;#10;            sound_type = &quot;neutral&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="thisSound = sounds_path.pop()&amp;#10;&amp;#10;sound_before_hint = next(sound_times)&amp;#10;print(sound_before_hint)&amp;#10;sound_start = HINT_START - sound_before_hint&amp;#10;&amp;#10;# sound_player.setSound(thisSound)&amp;#10;&amp;#10;sound_played = False&amp;#10;&amp;#10;if thisSound is None:&amp;#10;    sound_type = u'none'&amp;#10;    sound_played = True&amp;#10;elif u'cry' in thisSound:&amp;#10;    sound_type = u'negative'&amp;#10;elif u'laugh' in thisSound:&amp;#10;    sound_type = u'positive'&amp;#10;else:&amp;#10;    sound_type = u'neutral'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;thisSound = sounds_path.pop();&amp;#10;sound_before_hint = next(sound_times);&amp;#10;sound_start = (HINT_START - sound_before_hint);&amp;#10;sound_played = false;&amp;#10;if ((thisSound === null)) {&amp;#10;    sound_type = &quot;none&quot;;&amp;#10;    sound_played = true;&amp;#10;} else {&amp;#10;    if (_pj.in_es6(&quot;cry&quot;, thisSound)) {&amp;#10;        sound_type = &quot;negative&quot;;&amp;#10;    } else {&amp;#10;        if (_pj.in_es6(&quot;laugh&quot;, thisSound)) {&amp;#10;            sound_type = &quot;positive&quot;;&amp;#10;        } else {&amp;#10;            sound_type = &quot;neutral&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="thisSound = sounds_path.pop()&amp;#10;&amp;#10;sound_before_hint = next(sound_times)&amp;#10;sound_start = HINT_START - sound_before_hint&amp;#10;&amp;#10;# sound_player.setSound(thisSound)&amp;#10;&amp;#10;sound_played = False&amp;#10;&amp;#10;if thisSound is None:&amp;#10;    sound_type = u'none'&amp;#10;    sound_played = True&amp;#10;elif u'cry' in thisSound:&amp;#10;    sound_type = u'negative'&amp;#10;elif u'laugh' in thisSound:&amp;#10;    sound_type = u'positive'&amp;#10;else:&amp;#10;    sound_type = u'neutral'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="if thisSound is not None and not sound_played:&amp;#10;    sound_played = True&amp;#10;    # sound_player.play()" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="if (((thisSound !== null) &amp;&amp; (! sound_played))) {&amp;#10;    sound_played = true;&amp;#10;}&amp;#10;" valType="extendedCode"/>
@@ -644,17 +644,6 @@
   </Routines>
   <Flow>
     <Routine name="instruction"/>
-    <LoopInitiator loopType="TrialHandler" name="trials_2">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="" valType="str"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="0" valType="code"/>
-      <Param name="name" updates="None" val="trials_2" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
     <LoopInitiator loopType="TrialHandler" name="training_loop">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('answer', 'жизнь'), ('anagram', 'иьзнж')]), OrderedDict([('answer', 'пункт'), ('anagram', 'пнукт')])]" valType="str"/>
@@ -668,7 +657,6 @@
     </LoopInitiator>
     <Routine name="training"/>
     <LoopTerminator name="training_loop"/>
-    <LoopTerminator name="trials_2"/>
     <Routine name="attention"/>
     <LoopInitiator loopType="TrialHandler" name="all_anagrams">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
@@ -682,19 +670,7 @@
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
     <Routine name="main_task"/>
-    <LoopInitiator loopType="TrialHandler" name="trials">
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
-      <Param name="conditions" updates="None" val="None" valType="str"/>
-      <Param name="conditionsFile" updates="None" val="" valType="str"/>
-      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
-      <Param name="isTrials" updates="None" val="True" valType="bool"/>
-      <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="0" valType="code"/>
-      <Param name="name" updates="None" val="trials" valType="code"/>
-      <Param name="random seed" updates="None" val="" valType="code"/>
-    </LoopInitiator>
     <Routine name="main_task_feedback"/>
-    <LoopTerminator name="trials"/>
     <LoopTerminator name="all_anagrams"/>
     <Routine name="feedback"/>
   </Flow>
