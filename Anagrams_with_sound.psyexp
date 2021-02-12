@@ -589,8 +589,8 @@
         <Param name="Begin JS Routine" updates="constant" val="if ((success === &quot;No&quot;)) {&amp;#10;    negative_feedback_figure.opacity = 1;&amp;#10;} else {&amp;#10;    positive_feedback_figure.opacity = 1;&amp;#10;}&amp;#10;" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="if success == u'No':&amp;#10;    negative_feedback_figure.opacity = 1&amp;#10;else:&amp;#10;    positive_feedback_figure.opacity = 1&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
-        <Param name="Each Frame" updates="constant" val="break" valType="extendedCode"/>
-        <Param name="Each JS Frame" updates="constant" val="break;&amp;#10;" valType="extendedCode"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
